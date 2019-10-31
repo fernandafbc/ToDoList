@@ -22,10 +22,25 @@
         <action
             android:id="@+id/action_toDoListFragment_to_addToDoFragment"
             app:destination="@id/addToDoFragment" />
+        <action
+            android:id="@+id/action_toDoListFragment_to_toDoDetails22"
+            app:destination="@id/toDoDetails2" />
+        <argument
+            android:name="ToDoId"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/addToDoFragment"
         android:name="br.com.todolist.toDoList.AddToDoFragment"
         android:label="fragment_add_to_do"
         tools:layout="@layout/fragment_add_to_do" />
+    <fragment
+        android:id="@+id/toDoDetails2"
+        android:name="br.com.todolist.toDoList.ToDoDetails"
+        android:label="fragment_to_do_details"
+        tools:layout="@layout/fragment_to_do_details" >
+        <argument
+            android:name="ToDoId"
+            app:argType="string" />
+    </fragment>
 </navigation>
