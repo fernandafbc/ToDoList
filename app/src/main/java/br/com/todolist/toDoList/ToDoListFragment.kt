@@ -87,7 +87,6 @@ class ToDoListFragment : Fragment() {
         }.also {
             toDoAdapter.notifyDataSetChanged()
         }
-
     }
 
 
