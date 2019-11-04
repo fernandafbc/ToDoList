@@ -1,8 +1,9 @@
-package br.com.todolist
+package br.com.todolist.mainPage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import br.com.todolist.R
 
 class MainActivity : AppCompatActivity() {
 

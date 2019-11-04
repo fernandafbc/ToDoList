@@ -1,4 +1,4 @@
-package br.com.todolist.toDoList
+package br.com.todolist.toDoList.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

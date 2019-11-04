@@ -2,18 +2,20 @@ package br.com.todolist.toDoList
 
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import br.com.todolist.R
 import br.com.todolist.ToDoListApplication
+import br.com.todolist.toDoList.model.ToDo
+import br.com.todolist.toDoList.utils.ClickItemListener
+import br.com.todolist.toDoList.utils.ToDoAdapter
 import kotlinx.android.synthetic.main.fragment_to_do_list.*
 
 /**
@@ -29,9 +31,19 @@ class ToDoListFragment : Fragment() {
         toDoAdapter.setClickItemListener(object : ClickItemListener {
             override fun onClick(position: Int) {
                 val item = toDoList[position]
+                val itemId = item.id
 
-//                val action = ToDoListFragmentDirections.
-//                findNavController().navigate(R.id.action_toDoListFragment_to_toDoDetails2)
+                // desse jeito que estava procurando...
+                // jeito facil e bem parecido do jeito antigo de fazer
+                // crio um bundle com as coisas q eu quero passar
+                // o bundle simplesmente é um MAP
+                val bundle = bundleOf("itemId" to itemId)
+
+                // uso ela para passar para a outra tela recebendo uma String com id
+                findNavController().navigate(
+                    R.id.action_toDoListFragment_to_toDoDetails,
+                    bundle
+                )
             }
         })
     }

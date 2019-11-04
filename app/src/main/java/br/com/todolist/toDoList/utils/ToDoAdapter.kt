@@ -1,11 +1,11 @@
-package br.com.todolist.toDoList
+package br.com.todolist.toDoList.utils
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
 import br.com.todolist.R
+import br.com.todolist.toDoList.model.ToDo
 import kotlinx.android.synthetic.main.item_todo.view.*
 
 class ToDoAdapter(val toDoList: List<ToDo>) :

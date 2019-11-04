@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="br.com.todolist.mainPage.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_toDoListFragment"
             app:destination="@id/toDoListFragment" />
@@ -18,16 +18,18 @@
         android:id="@+id/toDoListFragment"
         android:name="br.com.todolist.toDoList.ToDoListFragment"
         android:label="fragment_to_do_list"
-        tools:layout="@layout/fragment_to_do_list" >
+        tools:layout="@layout/fragment_to_do_list">
         <action
             android:id="@+id/action_toDoListFragment_to_addToDoFragment"
             app:destination="@id/addToDoFragment" />
         <action
-            android:id="@+id/action_toDoListFragment_to_toDoDetails22"
-            app:destination="@id/toDoDetails2" />
-        <argument
-            android:name="ToDoId"
-            app:argType="string" />
+            android:id="@+id/action_toDoListFragment_to_toDoDetails"
+            app:destination="@id/toDoDetails">
+            <argument
+                android:name="ToDoId"
+                app:argType="string" />
+        </action>
+
     </fragment>
     <fragment
         android:id="@+id/addToDoFragment"
@@ -35,12 +37,8 @@
         android:label="fragment_add_to_do"
         tools:layout="@layout/fragment_add_to_do" />
     <fragment
-        android:id="@+id/toDoDetails2"
-        android:name="br.com.todolist.toDoList.ToDoDetails"
+        android:id="@+id/toDoDetails"
+        android:name="br.com.todolist.toDoList.ToDoDetailsFragment"
         android:label="fragment_to_do_details"
-        tools:layout="@layout/fragment_to_do_details" >
-        <argument
-            android:name="ToDoId"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_to_do_details" />
 </navigation>

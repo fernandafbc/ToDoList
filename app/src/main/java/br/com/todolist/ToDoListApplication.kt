@@ -2,7 +2,7 @@ package br.com.todolist
 
 import android.app.Application
 import androidx.room.Room
-import br.com.todolist.toDoList.ToDoDatabase
+import br.com.todolist.toDoList.database.ToDoDatabase
 
 class ToDoListApplication: Application(){
 

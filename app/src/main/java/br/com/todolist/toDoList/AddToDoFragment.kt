@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 
 import br.com.todolist.R
 import br.com.todolist.ToDoListApplication
+import br.com.todolist.toDoList.model.ToDo
 import kotlinx.android.synthetic.main.fragment_add_to_do.*
 import java.util.*
 
